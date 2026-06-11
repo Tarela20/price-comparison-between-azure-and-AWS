@@ -1,0 +1,37 @@
+Cloud Cost Comparison Report: AWS vs Microsoft Azure
+Introduction
+This report compares the estimated monthly cost of deploying a small web application on Amazon Web Services (AWS) and Microsoft Azure using both Linux and Windows operating systems. The estimates were generated using the AWS Pricing Calculator and Azure Pricing Calculator.
+
+Amazon Web Services (AWS)
+AWS Linux Estimate
+Configuration
+ComponentConfigurationServiceAmazon EC2RegionUS East (N. Virginia)Operating SystemLinuxInstance Typet4g.nanoNumber of Instances4EBS Storage30 GBS3 Storage30 GBData TransferNot ConfiguredPricing StrategyCompute Savings Plan (3-Year, No Upfront)Monthly Cost Breakdown
+ServiceMonthly Cost (USD)Amazon EC2$8.53Amazon S3$0.69Data Transfer$0.00Total$9.22
+
+AWS Windows Estimate
+Configuration
+ComponentConfigurationServiceAmazon EC2RegionUS East (N. Virginia)Operating SystemWindows ServerInstance Typet2.nanoNumber of Instances3EBS Storage30 GBS3 Storage30 GBData TransferNot ConfiguredPricing StrategyCompute Savings Plan (3-Year, No Upfront)Monthly Cost Breakdown
+ServiceMonthly Cost (USD)Amazon EC2$18.59Amazon S3$0.69Data Transfer$0.00Total$19.28
+Microsoft Azure
+Azure Linux Estimate
+Configuration
+ComponentConfigurationRegionEast USOperating SystemLinuxVirtual MachineB1sCPU1 CoreMemory1 GB RAMManaged DiskE4Storage AccountGeneral Purpose v2Storage Capacity30 GBData Transfer100 GB Inter-Region (East US ? East Asia)Monthly Cost Breakdown
+ServiceMonthly Cost (USD)Virtual Machine$14.74Storage Account$1.67Support$0.00Total$16.41
+Azure Windows Estimate
+Configuration
+ComponentConfigurationRegionEast USOperating SystemWindows ServerVirtual MachineD2 v3CPU2 vCPUsMemory8 GB RAMStorage AccountGeneral Purpose v2Storage Capacity30 GBManaged DiskNoneData Transfer5 GB Inter-Region (East US ? East Asia)Monthly Cost Breakdown
+ServiceMonthly Cost (USD)Virtual Machine$137.24Storage Account$1.67Support$0.00Total$138.91
+Cost Comparison
+PlatformOperating SystemMonthly Cost (USD)AWSLinux$9.22AWSWindows$19.28AzureLinux$16.41AzureWindows$138.91
+Analysis
+AWS Linux provides the lowest monthly cost at $9.22.
+AWS Windows costs approximately twice as much as AWS Linux due to Windows Server licensing.
+Azure Linux costs more than AWS Linux but remains relatively inexpensive.
+Azure Windows is the most expensive option because the selected D2 v3 virtual machine provides greater compute resources (2 vCPUs and 8 GB RAM) and includes Windows Server licensing.
+Differences in virtual machine sizes and configurations significantly affect pricing and should be considered when comparing cloud providers.
+
+Conclusion
+Based on the generated estimates, AWS Linux is the most cost-effective deployment option, followed by Azure Linux, AWS Windows, and Azure Windows. The results demonstrate how operating system licensing, virtual machine specifications, storage options, and network transfer configurations impact overall cloud infrastructure costs.
+Organizations should select cloud resources that closely match application requirements to avoid unnecessary costs from overprovisioned virtual machines.
+
+
